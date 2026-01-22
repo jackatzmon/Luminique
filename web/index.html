@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Luminique Photo Stream - QR-based guest photo upload for DJ events">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Luminique">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Luminique Photo Stream</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme color for browser UI -->
+  <meta name="theme-color" content="#0A0A0A">
+
+  <!-- Viewport for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Prevent phone number detection -->
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph tags for social sharing -->
+  <meta property="og:title" content="Luminique Photo Stream">
+  <meta property="og:description" content="Upload photos to the event slideshow">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* Loading spinner styles */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      background: #0A0A0A;
+    }
+
+    .loading-content {
+      text-align: center;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .loading-logo {
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 12px;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(155, 89, 182, 0.3);
+      border-top-color: #9B59B6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Hide content while loading */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0A0A0A;
+      overflow: hidden;
+    }
+
+    /* Prevent pull-to-refresh on mobile */
+    html {
+      overscroll-behavior: none;
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loading" id="loading">
+    <div class="loading-content">
+      <div class="loading-logo">LUMINIQUE</div>
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code related
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Web build outputs
+/web/flutter_service_worker.js
+/web/main.dart.js
+/web/main.dart.js.map
+/web/flutter_bootstrap.js
+/web/index.html.bak
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Credentials - NEVER commit these
+**/credentials.json
+**/google-services.json
+**/GoogleService-Info.plist
+firebase_options_prod.dart
+
+# Test coverage
+coverage/
+
+# Lock files (optional - uncomment if you want to commit lock files)
+# pubspec.lock
+
+# Generated files
+*.g.dart
+*.freezed.dart
+
+# Local configuration
+local_config.dart
