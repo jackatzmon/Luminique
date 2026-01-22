@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "luminique-photo-stream"
+  },
+  "targets": {
+    "luminique-photo-stream": {
+      "hosting": {
+        "luminique-photo-stream": [
+          "luminique-photo-stream"
+        ]
+      }
+    }
+  }
+}
