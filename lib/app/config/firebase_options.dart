@@ -37,15 +37,14 @@ class DefaultFirebaseOptions {
     }
   }
 
-  // TODO: Replace with your actual Firebase Web configuration
+  // Firebase Web configuration
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'YOUR_WEB_API_KEY',
-    appId: 'YOUR_WEB_APP_ID',
-    messagingSenderId: 'YOUR_SENDER_ID',
-    projectId: 'YOUR_PROJECT_ID',
-    authDomain: 'YOUR_PROJECT_ID.firebaseapp.com',
-    storageBucket: 'YOUR_PROJECT_ID.appspot.com',
-    measurementId: 'YOUR_MEASUREMENT_ID',
+    apiKey: 'AIzaSyBXLeuOpnstEqAeLrdl6PhQC6f9B7krqGE',
+    appId: '1:324075821867:web:9bac472a7e7cdf71c4c36e',
+    messagingSenderId: '324075821867',
+    projectId: 'luminique-photo-stream',
+    authDomain: 'luminique-photo-stream.firebaseapp.com',
+    storageBucket: 'luminique-photo-stream.firebasestorage.app',
   );
 
   // TODO: Replace with your actual Firebase Android configuration
