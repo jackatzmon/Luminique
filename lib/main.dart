@@ -26,9 +26,10 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Initialize services
+  // Initialize services (non-blocking)
   final networkService = NetworkService();
-  await networkService.initialize();
+  // Don't await - let it initialize in background
+  networkService.initialize();
 
   final localServerService = LocalServerService();
   final moderationService = ModerationService();
