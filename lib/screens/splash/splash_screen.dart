@@ -21,7 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _navigateAfterDelay() async {
     await Future.delayed(const Duration(seconds: 2));
-    if (mounted) {
+    if (!mounted) return;
+
+    try {
       // Check URL for event parameter or default to admin login
       final uri = Uri.base;
       final eventId = uri.queryParameters['event'];
@@ -34,11 +36,16 @@ class _SplashScreenState extends State<SplashScreen> {
       } else if (uri.path.startsWith('/e/')) {
         // Short event URL
         Navigator.of(context).pushReplacementNamed(uri.path);
-      } else if (uri.path == AppRoutes.slideshow) {
+      } else if (uri.path.contains('slideshow')) {
         // Slideshow URL
-        Navigator.of(context).pushReplacementNamed(uri.toString());
+        Navigator.of(context).pushReplacementNamed('${AppRoutes.slideshow}?event=$eventId');
       } else {
         // Default to admin login
+        Navigator.of(context).pushReplacementNamed(AppRoutes.adminLogin);
+      }
+    } catch (e) {
+      // Fallback to admin login on any error
+      if (mounted) {
         Navigator.of(context).pushReplacementNamed(AppRoutes.adminLogin);
       }
     }
