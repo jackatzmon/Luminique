@@ -62,14 +62,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-  assets:
-    - assets/images/
-    - assets/icons/
-
-  fonts:
-    - family: Luminique
-      fonts:
-        - asset: assets/fonts/Luminique-Regular.ttf
-        - asset: assets/fonts/Luminique-Bold.ttf
-          weight: 700
