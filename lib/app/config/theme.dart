@@ -156,7 +156,7 @@ class LuminiqueTheme {
           color: Colors.black87,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: lightSurface,
         elevation: 2,
         shape: RoundedRectangleBorder(
@@ -254,7 +254,7 @@ class LuminiqueTheme {
           color: Colors.white,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: darkCard,
         elevation: 4,
         shape: RoundedRectangleBorder(
