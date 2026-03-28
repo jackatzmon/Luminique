@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,10 +27,10 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Initialize services (non-blocking)
   final networkService = NetworkService();
-  // Don't await - let it initialize in background
-  networkService.initialize();
+  networkService.initialize().catchError((e) {
+    debugPrint('Network service init failed: $e');
+  });
 
   final localServerService = LocalServerService();
   final moderationService = ModerationService();

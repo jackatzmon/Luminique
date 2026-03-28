@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,15 +37,17 @@ class _SplashScreenState extends State<SplashScreen> {
       } else if (uri.path.startsWith('/e/')) {
         // Short event URL
         Navigator.of(context).pushReplacementNamed(uri.path);
-      } else if (uri.path.contains('slideshow')) {
-        // Slideshow URL
-        Navigator.of(context).pushReplacementNamed('${AppRoutes.slideshow}?event=$eventId');
+      } else if (uri.path == AppRoutes.slideshow) {
+        final slideshowRoute = eventId != null && eventId.isNotEmpty
+            ? '${AppRoutes.slideshow}?event=$eventId'
+            : AppRoutes.slideshow;
+        Navigator.of(context).pushReplacementNamed(slideshowRoute);
       } else {
         // Default to admin login
         Navigator.of(context).pushReplacementNamed(AppRoutes.adminLogin);
       }
     } catch (e) {
-      // Fallback to admin login on any error
+      debugPrint('Navigation error: $e');
       if (mounted) {
         Navigator.of(context).pushReplacementNamed(AppRoutes.adminLogin);
       }
